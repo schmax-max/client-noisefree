@@ -1,0 +1,53 @@
+html {
+}
+p {
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.verticalSpacing {
+  margin-top: 1.8rem;
+}
+
+.centering {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.standardWidth {
+  max-width: 500px;
+}
+
+.feedWidth {
+  max-width: 1019.2px;
+}
+
+.sidePadding {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+@media (max-width: 500px) {
+  .standardWidth {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 500px) {
+  .standardWidth {
+    min-width: 500px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidePadding {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+  .verticalSpacing {
+    margin-top: 0.6rem;
+  }
+}
