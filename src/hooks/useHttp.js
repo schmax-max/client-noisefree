@@ -41,7 +41,7 @@ export const useHttp = () => {
   const sendRequest = useCallback(async ({ body = {}, identifier }) => {
     dispatchHttp({ type: "SEND", identifier })
 
-    body = Object.assign(body, { client: "bbh" })
+    body = Object.assign(body, { client: "noisefree" })
 
     try {
       const { data } = await axios({

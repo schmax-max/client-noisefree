@@ -11,7 +11,7 @@
 
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 1px 1px #002c6280;
+  box-shadow: 1px 1px #30304f;
 }
 
 .cardImage {
@@ -29,10 +29,10 @@
   position: absolute;
   z-index: 999;
   margin: 0 auto;
-  background: #002c62;
+  background: #1f0138;
   opacity: 0.9;
   padding: 10px;
-  color: #ff7555;
+  color: #adadad;
 }
 
 .textTitle {

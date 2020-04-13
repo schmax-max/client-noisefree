@@ -10,14 +10,14 @@ const Header = ({ siteMetadata }) => (
       <h1 className={"fontPrimary"}>{siteMetadata.title}</h1>
       <h2 className={"fontSecondary"}>{siteMetadata.tagline}</h2>
     </div>
-    <div className={"backboard"}>
-      <Image />
-    </div>
   </header>
 )
 
 {
   /* <MDBSticky></MDBSticky> */
+  // <div className={"backboard"}>
+  //     <Image />
+  //   </div>
 }
 
 {

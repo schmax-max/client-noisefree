@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `BBall Heaven`,
-    tagline: `for the love of the game`,
-    description: `your heavenly portal to the divine realm of basketball`,
+    title: `Noisefree`,
+    tagline: `prioritising signal over noise`,
+    description: `understand the bigger`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -39,10 +39,10 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#003D8F`,
-        theme_color: `#003D8F`,
+        background_color: `#1F0138`,
+        theme_color: `#1F0138`,
         display: `minimal-ui`,
-        icon: `src/images/backboard_orange.png`, // This path is relative to the root of the site.
+        icon: `src/images/noisefree-grey.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

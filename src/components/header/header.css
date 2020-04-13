@@ -1,15 +1,16 @@
 .header {
-  background: #002c62;
+  background: #1f0138;
   margin: 0;
   display: flex;
+  padding: 12px 0;
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
 }
 
 .fontPrimary {
-  color: #ff7555;
-  font-family: Optima;
+  color: #adadad;
+  font-family: Copperplate;
   letter-spacing: 12px;
   padding: 0;
   margin: 0;
@@ -21,8 +22,8 @@
 /* font-style: Optima; */
 
 .fontSecondary {
-  color: white;
-  font-family: "Brush Script MT";
+  color: #adadad;
+  font-family: Copperplate;
   font-size: 2em;
   letter-spacing: 6px;
   opacity: 0.8;

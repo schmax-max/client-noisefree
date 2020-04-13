@@ -16,7 +16,7 @@ export const Loader = ({ loading }) => {
         css={override}
         sizeUnit={"px"}
         size={150}
-        color={"#ff7555"}
+        color={"#adadad"}
         loading={loading}
       />
     </div>
