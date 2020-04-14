@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Noisefree`,
+    title: `Noisefree Media`,
     tagline: `prioritising signal over noise`,
     description: `understand the bigger`,
     author: `@gatsbyjs`,

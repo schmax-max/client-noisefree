@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Image } from "react-bootstrap"
 import "./content.css"
 import { Loader } from "../loader/loader"
+import { Link } from "gatsby"
 
 export const ContentList = ({ data, loading }) => {
   return (
@@ -20,9 +21,9 @@ export const ContentList = ({ data, loading }) => {
 export const Content = ({ item }) => {
   const url = item.amp_url || item.content_url
   return (
-    <div
+    <Link
       className="verticalSpacing card standardWidth centering"
-      onClick={() => window.open(url)}
+      to={`reader?${url}`}
       data-test="content"
     >
       <Image
@@ -41,7 +42,7 @@ export const Content = ({ item }) => {
           </text>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 

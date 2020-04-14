@@ -1,0 +1,38 @@
+.centering {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 100%;
+}
+
+.centeringReader {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 550px;
+}
+
+.paddingStyle {
+  overflow: hidden;
+  padding-left: 7%;
+  padding-right: 7%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .paddingStyle {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 767px) {
+  .paddingStyle {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

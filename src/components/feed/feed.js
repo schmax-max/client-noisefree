@@ -10,9 +10,10 @@ export const Feed = ({ searchTerms }) => {
   if (searchTerms) {
     body = { searchTerms }
   }
+  const api = "editor"
 
   React.useEffect(() => {
-    sendRequest({ body })
+    sendRequest({ body, api })
   }, [sendRequest, searchTerms])
 
   return <ContentList data={data} loading={loading} />

@@ -1,6 +1,6 @@
 import { useReducer, useCallback } from "react"
 import axios from "axios"
-const { editorLink } = require("./_config")
+const links = require("./_config")
 
 const initialState = {
   loading: false,
@@ -38,14 +38,15 @@ export const useHttp = () => {
 
   const clearHttpState = useCallback(() => dispatchHttp({ type: "CLEAR" }), [])
 
-  const sendRequest = useCallback(async ({ body = {}, identifier }) => {
+  const sendRequest = useCallback(async ({ body = {}, identifier, api }) => {
     dispatchHttp({ type: "SEND", identifier })
-
-    body = Object.assign(body, { client: "noisefree" })
+    if (api === "editor") {
+      body = Object.assign(body, { client: "noisefree" })
+    }
 
     try {
       const { data } = await axios({
-        url: editorLink,
+        url: links[api],
         method: "POST",
         data: body,
       })
@@ -68,43 +69,3 @@ export const useHttp = () => {
     clearHttpState,
   }
 }
-
-// export default useHttp
-
-// function fetchArticles(apiIdentifier, category, allocation, allocations) {
-//   // console.log("fetchArticles worked")
-//   return function(dispatch) {
-//     dispatch({
-//       type: actionTypes.REQUESTED_API,
-//       apiIdentifier,
-//     })
-
-//     // console.log({ category, allocation, allocations })
-//     return axios.post(`${}`, { client: "bbh" }).then(({ data }) => {
-//       // console.log("data received from api")
-//       // console.log({ data })
-//       dispatch({
-//         type: actionTypes.REQUESTED_API,
-//         apiIdentifier,
-//       })
-//       dispatch({
-//         type: actionTypes.RECEIVED_ARTICLES,
-//         category,
-//         allocation,
-//         data,
-//       })
-//       dispatch({
-//         type: actionTypes.STOP_LOADING,
-//       })
-//       // if (allocation) {
-//       //   dispatch({
-//       //     type: actionTypes.NICHE_MODE,
-//       //   })
-//       // } else {
-//       //   dispatch({
-//       //     type: actionTypes.CATEGORY_MODE,
-//       //   })
-//       // }
-//     })
-//   }
-// }

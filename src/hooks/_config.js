@@ -7,6 +7,12 @@ const editorLinks = {
   production: `https://editor-dot-${project}.appspot.com/editor/server/`,
 }
 
+const cleanerLinks = {
+  development: "http://localhost:8082/helper-cleaner/server/",
+  production: `https://helper-cleaner-dot-${project}.appspot.com/helper-cleaner/server/`,
+}
+
 module.exports = {
-  editorLink: editorLinks[env],
+  editor: editorLinks[env],
+  cleaner: cleanerLinks[env],
 }
